@@ -75,6 +75,11 @@ nav img{
     position: relative;
     cursor: pointer;
 }
+.knowledge:hover{
+    border:1px solid rgb(39, 38, 38);
+    background: cyan;
+    transition: 1s;
+}
 @media(max-width:700px){
     .textbox h1{
         font-size: 20px;
