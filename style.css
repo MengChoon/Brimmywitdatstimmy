@@ -10,6 +10,7 @@
     background-position:center;
     background-size: cover;
     position: relative;
+    
 }
 nav{
     display:flex;
@@ -58,6 +59,8 @@ nav img{
 }
 .textbox h1{
     font-size: 62px;
+    font-family: 'VALORANT', sans-serif;
+
 }
 .textbox p{
     margin: 10px 0 40px;
