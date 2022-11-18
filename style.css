@@ -69,7 +69,7 @@ nav img{
         font-size: 20px;
     }
     .nav-links{
-        position: absolute;
+        position:fixed;
         background: rgba(191, 191, 191, 0.5);
         height: 100vh;
         width: 200px;
