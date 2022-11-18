@@ -64,6 +64,17 @@ nav img{
     font-size:14px;
     color: white;
 }
+.knowledge{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
 @media(max-width:700px){
     .textbox h1{
         font-size: 20px;
