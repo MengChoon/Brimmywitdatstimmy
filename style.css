@@ -136,7 +136,9 @@ p{
 .individual{
     margin-top:5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
+}
+.agent{
     flex-basis: 31%;
     background: peachpuff;
     border-radius: 10px;
