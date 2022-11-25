@@ -94,7 +94,7 @@ nav .fa{
         display: block;
     }
     .nav-links{
-        position:fixed;
+        position: absolute;
         background: rgba(121, 118, 118, 0.5);
         height: 100vh;
         width: 200px;
@@ -110,19 +110,18 @@ nav .fa{
         cursor: pointer;
         font-size: 22px;
         margin:10px ;
-        position: fixed;
-        text-align: right;
     }
     .nav-links ul{
         padding:30px;
     }
 }
 /*members*/
-.members{
+.aboutus{
     width:80%;
     margin:auto;
     text-align: center;
     padding-top: 100px;
+    background-color: black;
 }
 h1{
     font-size:36;
@@ -158,6 +157,6 @@ h3{
 }
 @media(max-width:700px){
     .individual{
-        flex-direction: column;
+        flex-direction: column ;
     }
 }
