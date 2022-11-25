@@ -67,7 +67,7 @@ nav img{
     font-size:14px;
     color: white;
 }
-.knowledge{
+.benefits{
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -78,7 +78,7 @@ nav img{
     position: relative;
     cursor: pointer;
 }
-.knowledge:hover{
+.benefits:hover{
     border:1px solid rgb(39, 38, 38);
     background: cyan;
     transition: 1s;
