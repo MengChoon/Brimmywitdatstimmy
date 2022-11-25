@@ -116,7 +116,6 @@ nav img{
     top: 5px;
     right: 10%;
     cursor: pointer;
-    background-size: 46px 30px;
 }
 .close-menu{
     display: block;
@@ -125,5 +124,4 @@ nav img{
     top: 5px;
     right: 10%;
     cursor: pointer;
-    background-size: 46px 30px;
 }
