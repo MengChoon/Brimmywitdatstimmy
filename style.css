@@ -84,7 +84,7 @@ nav img{
     transition: 1s;
 }
 nav.open-menu{
-    display: none;
+    visibility: hidden;
 }
 nav.close-menu{
     display: none;
