@@ -136,29 +136,13 @@ p{
     line-height: 22px;
     padding:10px;
 }
-.individual{
+.fakenews{
     margin-top:5%;
     display: flex;
     justify-content: space-between
-}
-.agent{
-    flex-basis: 31%;
-    background: peachpuff;
-    border-radius: 10px;
-    margin-bottom:5%;
-    padding:20px 12px;
-    box-sizing: border-box;
 }
 h3{
     text-align:center;
     font: weight 600px;
     margin:10px 0;
-}
-.agent:hover{
-    box-shadow:0 0 20px 0px rgba(0,0,0,0.2)
-}
-@media(max-width:700px){
-    .individual{
-        flex-direction: column ;
-    }
 }
