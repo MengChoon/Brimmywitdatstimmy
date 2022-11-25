@@ -83,11 +83,9 @@ nav img{
     background: cyan;
     transition: 1s;
 }
-.open-menu{
+nav.menu{
     display: none;
-}
-.close-menu{
-    display: none;
+
 }
 @media(max-width:700px){
     .textbox h1{
@@ -108,16 +106,7 @@ nav img{
     }
 }
 
-.open-menu{
-    display: block;
-    width:35px;
-    position:absolute;
-    top: 5px;
-    right: 10%;
-    cursor: pointer;
-    background-size: 46px 30px;
-}
-.close-menu{
+nav.menu{
     display: block;
     width:35px;
     position:absolute;
