@@ -83,7 +83,7 @@ nav img{
     background: cyan;
     transition: 1s;
 }
-nav.fa{
+nav .fa{
     display: none;
 }
 @media(max-width:700px){
