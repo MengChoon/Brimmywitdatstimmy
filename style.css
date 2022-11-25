@@ -83,7 +83,9 @@ nav img{
     background: cyan;
     transition: 1s;
 }
-
+nav.fa{
+    display: none;
+}
 @media(max-width:700px){
     .textbox h1{
         font-size: 20px;
