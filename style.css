@@ -106,12 +106,3 @@ nav.menu{
     }
 }
 
-nav.menu{
-    display: block;
-    width:35px;
-    position:absolute;
-    top: 5px;
-    right: 10%;
-    cursor: pointer;
-    background-size: 46px 30px;
-}
