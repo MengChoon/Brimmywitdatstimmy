@@ -127,6 +127,7 @@ h1{
     font-size: 80px;;
     font-weight:600;
     line-height: 80px;
+    padding: 10px;
 }
 p{
     color: black;
