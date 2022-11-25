@@ -110,6 +110,7 @@ nav .fa{
         cursor: pointer;
         font-size: 22px;
         margin:10px ;
+        position: fixed;
     }
     .nav-links ul{
         padding:30px;
