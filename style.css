@@ -83,12 +83,7 @@ nav img{
     background: cyan;
     transition: 1s;
 }
-nav.open-menu{
-    visibility: hidden;
-}
-nav.close-menu{
-    display: none;
-}
+
 @media(max-width:700px){
     .textbox h1{
         font-size: 20px;
@@ -109,19 +104,3 @@ nav.close-menu{
     }
 }
 
-.open-menu{
-    display: block;
-    width:35px;
-    position:absolute;
-    top: 5px;
-    right: 10%;
-    cursor: pointer;
-}
-.close-menu{
-    display: block;
-    width:35px;
-    position:absolute;
-    top: 5px;
-    right: 10%;
-    cursor: pointer;
-}
