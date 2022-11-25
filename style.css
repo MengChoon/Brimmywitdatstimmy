@@ -84,8 +84,7 @@ nav img{
     transition: 1s;
 }
 .open-menu{
-    width:35px;
-    position:absolute;
+    display:block;
     margin: 10px;
     cursor: pointer;
 }
