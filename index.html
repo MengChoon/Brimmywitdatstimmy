@@ -14,7 +14,7 @@
         <nav>
             <a href="index.html"><img src="images/logo.jpg"></a>
             <div class="nav-links">
-                <img src="images/cross.png" class="close-menu" >
+                <img src="images/cross.png" class="close-menu" id="menu" onclick="closingmenu()">
                 <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="">BIO</a></li>
@@ -23,10 +23,16 @@
                 <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
-            <img src="IMAGES/menu.png" class="open-menu">            
+            <img src="IMAGES/menu.png" class="open-menu" onclick="openingmenu()">            
         </nav>  
         <script>
-            var menu
+            var menu=document.getElementById("menu");
+            function closingmenu(){
+                menu.style.top="-100vh";
+            }
+            function openingmenu(){
+                menu.style.top="17%";
+            }
         </script>
 <div class ="textbox">
     <h1>Brimmy with the stimmy</h1>
