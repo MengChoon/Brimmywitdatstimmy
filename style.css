@@ -86,8 +86,7 @@ nav img{
 .open-menu{
     width:35px;
     position:absolute;
-    top: 5px;
-    right: 10%;
+    margin: 10px;
     cursor: pointer;
 }
 .close-menu{
