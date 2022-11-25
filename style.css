@@ -107,7 +107,9 @@ nav img{
         z-index: 2;
     }
 }
+
 .open-menu{
+    display: block;
     width:35px;
     position:absolute;
     top: 5px;
@@ -116,6 +118,7 @@ nav img{
     background-size: 46px 30px;
 }
 .close-menu{
+    display: block;
     width:35px;
     position:absolute;
     top: 5px;
