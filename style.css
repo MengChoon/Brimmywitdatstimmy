@@ -84,11 +84,12 @@ nav img{
     transition: 1s;
 }
 .open-menu{
-    display:block;
-    color: white;
-    font-size: 2px;
-    margin: 10px;
+    width:35px;
+    position:absolute;
+    top: 5px;
+    right: 10%;
     cursor: pointer;
+    background-size: 46px 30px;
 }
 .close-menu{
     width:35px;
