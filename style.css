@@ -3,6 +3,9 @@
     padding:0;
     font-family: 'PT Sans Narrow', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+  }
 .header{
     min-height:100vh;
     width:100%;
@@ -181,16 +184,24 @@ h1{
     padding: bottom 30px;
     color: white;
 }
-.feature-img img{
+.agent-pic img{
     width: 50%;
     padding:20px;
     display: block;
     justify-content: center;
 }
+.center { 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+  }
 .feature-details{
-    padding-left: 40px;
     text-align: justify ;
-    width:750px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
 }
 .feature-details h3{
     font-family: 'VALORANT', sans-serif;
@@ -200,4 +211,24 @@ h1{
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     color: white;
+}
+.contact{
+    margin:100px auto;
+    width:80%;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/val.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 0;
+}
+.contact h1{
+    color: white;
+    margin-bottom: 40;
+    padding: 0;
+}
+@media(max-width:700px){
+    .contact h1{
+        font-size: 24px;
+    }
 }
