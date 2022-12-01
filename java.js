@@ -1,8 +1,8 @@
 
     var menu=document.getElementById("menu");
-    function closingmenu(){
+    function closemenu(){
         menu.style.right="-200px";
     }
-    function openingmenu(){
+    function openmenu(){
         menu.style.right="0";
     }
