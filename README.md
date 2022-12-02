@@ -10,3 +10,13 @@ sage image=(https://images.wallpapersden.com/image/download/sage-art-valorant_bG
 brimstone image=(https://preview.redd.it/fuj95prg34d81.jpg?width=2480&format=pjpg&auto=webp&s=c5571331c14037faf837b684aeab0734b68c4dde)
 viper image=(https://wallpapercave.com/wp/wp6560515.png)
 contact us goes to valorant support(https://support-valorant.riotgames.com/hc/en-us)
+hover effect learnt from https://www.w3schools.com/howto/howto_css_transition_hover.asp
+forms-https://www.youtube.com/watch?v=fNcJuPIZ2WE&ab_channel=WebDevSimplified
+https://www.youtube.com/watch?v=oYRda7UtuhA&t=2291s&ab_channel=EasyTutorials
+https://www.youtube.com/watch?v=vc9rgFHr098&ab_channel=WEBCIFAR
+https://www.w3schools.com/css/css3_buttons.asp
+https://www.youtube.com/watch?v=XH5OW46yO8I&ab_channel=FlorinPop
+https://www.paypal.com/buttons/smart?flowloggingId=f15943885c6de
+
+This website is made for a valorant band.
+target = music lovers

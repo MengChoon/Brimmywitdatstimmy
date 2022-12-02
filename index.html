@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Brimmy with that stimmy</title>
     <link rel="stylesheet" href="style.css">
@@ -23,7 +24,7 @@
 <body>
     <section class="header" id="header">
         <nav>
-            <a href="index.html"><img src="images/logo.jpg"></a>
+            <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
             <div class="nav-links" id="menu">
                 <!--function linked to java-->
                 <i class="fa fa-times-circle" onclick="closemenu()"></i>
@@ -31,7 +32,7 @@
                 <li><a href="#header">HOME</a></li>
                 <li><a href="#mv">MUSIC</a></li>
                 <li><a href="#bio">BIO</a></li>
-                <li><a href="https://merch.riotgames.com/en-us/collection/valorant/">SHOP</a></li>
+                <li><a href="https://merch.riotgames.com/en-us/collection/valorant/" target="_blank">SHOP</a></li>
                 <li><a href="#contact-us">CONTACT</a></li>
                 </ul>
             </div>   
@@ -42,8 +43,134 @@
 <div class ="textbox">
     <h1>Brimmy with the stimmy</h1>
     <p>World's number 1 brimstone homage band</p>
-    <!--link to paylah for donation-->
-    <a href="dono.html" class="benefits">Help us make better music</a>
+    <!-------------------------------------------------------------------link to paypal for donation--------------------------------------------------------->
+    <button class="benefits" id="benefit">Help us make better music</button>
+    <div class="payme-container" id="payme_container">
+        <div class="payme">
+        <div>
+        <div id="smart-button-container">
+            <div style="text-align: center; color:black"><label for="description">Please support us </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+              <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+            <div style="text-align: center; color: black;"><label for="amount">1-100 </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
+              <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+            <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+              <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+            <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+            <button id = "close" class="close-pal" >Close</button>
+          </div>
+          <!--------------------------------------------------------paypal given script------------------------------------------------------>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+          <script>
+          function initPayPalButton() {
+            var description = document.querySelector('#smart-button-container #description');
+            var amount = document.querySelector('#smart-button-container #amount');
+            var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+            var priceError = document.querySelector('#smart-button-container #priceLabelError');
+            var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+            var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+            var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+        
+            var elArr = [description, amount];
+        
+            if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+              invoiceidDiv.style.display = "block";
+            }
+        
+            var purchase_units = [];
+            purchase_units[0] = {};
+            purchase_units[0].amount = {};
+        
+            function validate(event) {
+              return event.value.length > 0;
+            }
+        
+            paypal.Buttons({
+              style: {
+                color: 'gold',
+                shape: 'rect',
+                label: 'paypal',
+                layout: 'vertical',
+                
+              },
+        
+              onInit: function (data, actions) {
+                actions.disable();
+        
+                if(invoiceidDiv.style.display === "block") {
+                  elArr.push(invoiceid);
+                }
+        
+                elArr.forEach(function (item) {
+                  item.addEventListener('keyup', function (event) {
+                    var result = elArr.every(validate);
+                    if (result) {
+                      actions.enable();
+                    } else {
+                      actions.disable();
+                    }
+                  });
+                });
+              },
+        
+              onClick: function () {
+                if (description.value.length < 1) {
+                  descriptionError.style.visibility = "visible";
+                } else {
+                  descriptionError.style.visibility = "hidden";
+                }
+        
+                if (amount.value.length < 1) {
+                  priceError.style.visibility = "visible";
+                } else {
+                  priceError.style.visibility = "hidden";
+                }
+        
+                if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                  invoiceidError.style.visibility = "visible";
+                } else {
+                  invoiceidError.style.visibility = "hidden";
+                }
+        
+                purchase_units[0].description = description.value;
+                purchase_units[0].amount.value = amount.value;
+        
+                if(invoiceid.value !== '') {
+                  purchase_units[0].invoice_id = invoiceid.value;
+                }
+              },
+        
+              createOrder: function (data, actions) {
+                return actions.order.create({
+                  purchase_units: purchase_units,
+                });
+              },
+        
+              onApprove: function (data, actions) {
+                return actions.order.capture().then(function (orderData) {
+        
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+        
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = '';
+                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+        
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+        
+              onError: function (err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+          </script>
+    </div>
+    </div>
+</div>
 </div>
     </section>
 <!--music video section-->
@@ -51,16 +178,15 @@
     <h1>Music</h1>
     <p>Check out our latest songs here!</p>
     <div class="song">
-        <iframe width="650" height="315" src="https://www.youtube.com/embed/h7MYJghRWt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/h7MYJghRWt0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
     </div>
     <div class="song">
-        <iframe width="650" height="315" src="https://www.youtube.com/embed/DqgK4llE1cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/DqgK4llE1cw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
     </div>
     <div class="song">
-        <iframe width="650" height="315" src="https://www.youtube.com/embed/xU2U73Tk-DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <iframe src="https://www.youtube.com/embed/xU2U73Tk-DM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </section>
 <!--members-->
@@ -113,13 +239,43 @@
     
         </div>
     </div>
-    </h1>
 </section>
 <!--contact section-->
 <section class="contact" id="contact-us">
     <h1>For booking </h1>
-    <a href="https://support-valorant.riotgames.com/hc/en-us" class="benefits">CONTACT US</a>
-</section>
+    <p>Leave us your details and we will get in touch with you</p>
+</section>   
+<!--input -->
+<div=info-section>
+    <div class="info">
+      <form method="POST" id="my-form">
+  
+        <div class="form-group">
+          <label for="firstName"> First Name</label>
+          <input type="text" id="firstName" name="firstName">
+        </div>
+  
+        <div class="form-group">
+          <label for="latsName">Last Name</label>
+          <input type="text" id="lastName" name="lastName">
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+  
+        <div class="form-group">
+          <label for="massage">Massage</label>
+          <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+        </div>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+<!--footer-->
 <section class="footer">
     <h4>About Us</h4>
     <p>World's undeniably best brimstone group</p>
@@ -130,7 +286,7 @@
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-linkedin-in"></i>
     </div>
-    <p>Made with <i class="fa-regular fa-heart"></i> by Chua Meng Choon(s10240106)</i></p>
+    <p>Made with <i class="fa-regular fa-heart"></i> by Chua Meng Choon(s10240106)</p>
 </section>
 <script src="java.js"></script>
 </body>
