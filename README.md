@@ -17,6 +17,7 @@ https://www.youtube.com/watch?v=vc9rgFHr098&ab_channel=WEBCIFAR
 https://www.w3schools.com/css/css3_buttons.asp
 https://www.youtube.com/watch?v=XH5OW46yO8I&ab_channel=FlorinPop
 https://www.paypal.com/buttons/smart?flowloggingId=f15943885c6de
+https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll
 
 This website is made for a valorant band.
 target = music lovers

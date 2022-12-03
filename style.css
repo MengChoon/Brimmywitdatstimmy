@@ -4,6 +4,8 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 html {
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
   /* background image of first page*/
