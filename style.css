@@ -361,9 +361,3 @@ h1{
 .fa-regular{
     color:rgb(225, 114, 133)
 }
-.thanks{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50,-50);
-}

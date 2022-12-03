@@ -16,6 +16,10 @@ feature 8) after filling in valid contact information, contact shows a approved 
 # features in phone mode
 feature 8) home menu navigation bar has been made into a slider at the side
 feature 9) site is responsive
+# Technologies Used
+javascript
+HTML
+css
 
 
 
@@ -26,11 +30,7 @@ feature 9) site is responsive
 
 
 
-
-
-
-
-javascript used is at the bottom of index.html
+# credit
 shop in menu is linked to valorant shop (https://merch.riotgames.com/en-us/collection/valorant/)
 background of first page(https://i.ytimg.com/vi/h7MYJghRWt0/maxresdefault.jpg)
 image black=https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fsimple-black&psig=AOvVaw3_DwsOJK2DdBXyZtI-WO3B&ust=1669534988291000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDildGsy_sCFQAAAAAdAAAAABAT
@@ -49,5 +49,6 @@ https://www.paypal.com/buttons/smart?flowloggingId=f15943885c6de
 https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll
 https://www.youtube.com/watch?v=QKMFJhB9eEY&ab_channel=CodingNepal
 https://www.w3schools.com/howto/howto_css_contact_form.asp
-
+https://www.youtube.com/watch?v=fP98x3h_z78&ab_channel=wpguide
+https://www.youtube.com/watch?v=sGQSz22U8VM&ab_channel=EasyTutorials
 
