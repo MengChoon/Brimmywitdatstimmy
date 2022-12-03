@@ -43,22 +43,23 @@
 <div class ="textbox">
     <h1>Brimmy With The Stimmy</h1>
     <p>Valorant's Number 1 Band</p>
+    <!--pls-->
+    
     <!------------------------------------------------------------------link to paypal for donation--------------------------------------------------------->
     <button class="benefits" id="benefit">Help us make better music</button>
     <div class="payme-container" id="payme_container">
-        <div class="payme">
+      <div class="payme">
         <div>
-        <div id="smart-button-container">
-            <div style="text-align: center; color:black"><label for="description">Please support us </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+          <div id="smart-button-container">
+            <div style="text-align: center; color: black;"><label for="description">Description </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
               <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-            <div style="text-align: center; color: black;"><label for="amount">1-100 </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
+            <div style="text-align: center;color: black;"><label for="amount">Amount </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
               <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
             <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
               <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
             <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
             <button id = "close" class="close-pal" >Close</button>
           </div>
-          <!-------------------------------------------------------paypal given script------------------------------------------------------>
           <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
           <script>
           function initPayPalButton() {
@@ -87,9 +88,9 @@
             paypal.Buttons({
               style: {
                 color: 'gold',
-                shape: 'rect',
+                shape: 'pill',
                 label: 'paypal',
-                layout: 'vertical',
+                layout: 'horizontal',
                 
               },
         
