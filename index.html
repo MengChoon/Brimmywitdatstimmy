@@ -41,8 +41,8 @@
 
 
 <div class ="textbox">
-    <h1>Brimmy with the stimmy</h1>
-    <p>World's number 1 brimstone homage band</p>
+    <h1>Brimmy With The Stimmy</h1>
+    <p>Valorant's Number 1 Band</p>
     <!------------------------------------------------------------------link to paypal for donation--------------------------------------------------------->
     <button class="benefits" id="benefit">Help us make better music</button>
     <div class="payme-container" id="payme_container">
@@ -242,36 +242,22 @@
 </section>
 <!-------------------contact section---------------->
 <section class="contact" id="contact-us">
-    <h1>For booking </h1>
+    <h1>Contact us </h1>
     <p>Leave us your details and we will get in touch with you</p>
 </section>   
 <!---------input ---------------->
     <div class="info">
-      <form method="POST" id="my-form">
-  
+      <form id="my-form" onsubmit="sendEmail(); reset();return false;">
         <div class="form-group">
-          <label for="firstName"> First Name</label>
-          <input type="text" id="firstName" name="firstName">
-        </div>
-  
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName">
-        </div>
-  
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-        </div>
-  
-        <div class="form-group">
-          <label for="massage">Massage</label>
-          <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
-        </div>
-  
+          <h3>Contact form</h3>
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Email address" required>
+          <textarea name="message" rows="4" placeholder="Leave a message"></textarea>
         <button type="submit">Submit</button>
+      </div>
       </form>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <div id="status"></div>
 <!--footer-->
 <section class="footer">
@@ -286,6 +272,7 @@
     </div>
     <p>Made with <i class="fa-regular fa-heart"></i> by Chua Meng Choon(s10240106)</p>
 </section>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="java.js"></script>
 </body>
 </html>

@@ -16,3 +16,17 @@
     close.addEventListener('click',()=>{
         payme_container.classList.remove('show');
     });
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticmail.com",
+            Username : "cmcislyfe@gmail.com",
+            Password : "cmc2005^_^",
+            To : 'chuamengc@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New contact",
+            Body : "Name : " + document.getElementById("name").value +"<br> Email:"+ document.getElementById("email").value + "<br> Message: "
+        }).then(
+          message => alert("Thank you for the message")
+        );
+        
+    }

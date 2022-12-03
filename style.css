@@ -96,6 +96,7 @@ nav img{
 .payme-container.show{
     pointer-events: auto;
     opacity: 1;
+    z-index: 33333;
 }
 .payme{
     background-color: white;
@@ -178,6 +179,7 @@ nav .fa{
     height: 100%;
     width: 100%;
     position: absolute;
+    z-index: -1 ;
 }
 /*black background for members section*/
 .members{
@@ -358,4 +360,10 @@ h1{
 }
 .fa-regular{
     color:rgb(225, 114, 133)
+}
+.thanks{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50,-50);
 }
